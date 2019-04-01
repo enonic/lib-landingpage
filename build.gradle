@@ -1,29 +1,20 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        jcenter()
-        maven {
-            url 'http://repo.enonic.com/public'
-        }
-    }
-
-    dependencies {
-        classpath "com.enonic.xp:gradle-plugin:${xpVersion}"
-    }
+plugins {
+    id 'com.enonic.xp.app' version '2.0.0'
+    id 'maven-publish'
 }
 
-apply plugin: 'com.enonic.xp.app'
-apply plugin: 'maven-publish'
-
 dependencies {
+}
+
+app {
+  displayName = 'Landing page'
+  systemVersion = "${xpVersion}"
 }
 
 repositories {
     mavenLocal()
     jcenter()
-    maven {
-        url 'http://repo.enonic.com/public'
-    }
+    xp.enonicRepo()
 }
 
 publishing {
