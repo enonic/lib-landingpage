@@ -1,31 +1,15 @@
 plugins {
-    id 'com.enonic.xp.app' version '2.0.0'
     id 'maven-publish'
+    id 'java'
 }
 
 dependencies {
 }
 
-app {
-  displayName = 'Landing page'
-  systemVersion = "${xpVersion}"
-}
-
 repositories {
     mavenLocal()
     jcenter()
-    xp.enonicRepo()
-}
-
-publishing {
-  publications {
-    mavenJava( MavenPublication ) {
-      from components.java
-    }
-  }
-  repositories {
     maven {
-      url 'http://repo.enonic.net/artifactory/public'
+        url 'http://repo.enonic.com/public'
     }
-  }
 }
