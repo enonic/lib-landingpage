@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    include 'com.enonic.lib:landingpage:1.0.0'
+    include 'com.enonic.lib:lib-landingpage:2.0.0'
 }
 ```
 
